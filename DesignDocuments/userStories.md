@@ -26,7 +26,7 @@ As a registered user, I want to be able to add goals, so that I can track progre
 
 ### Select predefined goals 
 
-As a user, I want to choose from predefined sustainability goals so that I can get started easily.
+As a user, I want to choose from predefined sustainability goals based on my carbon footprint assessment so that I can get started easily.
 
 ### Edit Goals *
 
