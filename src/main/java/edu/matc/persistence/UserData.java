@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.User;
+import edu.matc.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.sql.*;
