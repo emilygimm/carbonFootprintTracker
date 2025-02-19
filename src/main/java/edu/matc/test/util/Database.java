@@ -11,11 +11,11 @@ import java.util.Properties;
 
 /**
  * Provides access to the database
- * @author egimm
+ * @author pwaite
  */
 
 public class Database {
-
+    private static Database instance;
     private Properties properties;
     private Connection connection;
 
