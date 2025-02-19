@@ -3,6 +3,8 @@ import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import org.hibernate.annotations.GenericGenerator;
 
+import java.time.LocalDate;
+
 /**
  * A class that represents a user.
  *
@@ -25,6 +27,10 @@ public class User {
     @GenericGenerator(name = "native",strategy = "native")
     private int id;
 
+    @Column(name ="date_of_birth")
+    private LocalDate dateOfBirth;
+
+
 
 
     /**
@@ -33,11 +39,16 @@ public class User {
      * @param firstName users first name
      * @param lastName  users last name
      * @param userName  users username
+     * @param dateOfBirth users birthday
      */
     public User(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public User() {
 
     }
 
@@ -111,6 +122,23 @@ public class User {
         this.id = id;
     }
 
+    /**
+     * Gets date of birth.
+     *
+     * @return the date of birth
+     */
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+    /**
+     * Sets date of birth.
+     * @param dateOfBirth the date of birth
+     */
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+
 
     @Override
     public String toString() {
@@ -118,7 +146,8 @@ public class User {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
-                ", id=" + id +
+                ", id=" + id + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
 

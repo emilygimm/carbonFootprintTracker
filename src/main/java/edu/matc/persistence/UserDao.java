@@ -19,6 +19,17 @@ public class UserDao {
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
     /**
+     * Save user
+     * @param user
+     */
+    public void save(User user) {
+        Session session = sessionFactory.openSession();
+        Transaction tx = session.beginTransaction();
+        session.persist(user);
+        tx.commit();
+        session.close();
+    }
+    /**
      * Get user by id
      */
     public User getById(int id) {

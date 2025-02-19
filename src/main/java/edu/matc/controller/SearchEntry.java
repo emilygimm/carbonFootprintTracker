@@ -1,5 +1,7 @@
 package edu.matc.controller;
 
+import edu.matc.persistence.UserDao;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
