@@ -11,7 +11,7 @@ import java.time.LocalDate;
  * @author egimm
  */
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Column(name = "first_name")
     private String firstName;
@@ -21,6 +21,9 @@ public class User {
 
     @Column(name = "user_name")
     private String userName;
+
+    @Column(nullable = false)
+    private String passwordHash;
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
@@ -39,13 +42,14 @@ public class User {
      * @param firstName users first name
      * @param lastName  users last name
      * @param userName  users username
-     * @param dateOfBirth users birthday
+     * @param passwordHash users password (hashed)
      */
     public User(String firstName, String lastName, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
-        this.dateOfBirth = dateOfBirth;
+        this.passwordHash = passwordHash;
+
     }
 
     public User() {
@@ -104,6 +108,23 @@ public class User {
         this.userName = userName;
     }
 
+    /**
+     * Gets password hash.
+     *
+     * @return the password hash
+     */
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+
+    /**
+     * Sets password hash.
+     *
+     * @param passwordHash the password hash
+     */
+    public void setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+    }
     /**
      * Gets id.
      *

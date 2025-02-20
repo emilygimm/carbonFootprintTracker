@@ -18,17 +18,20 @@ public class UserDao {
     private final Logger logger = LogManager.getLogger(this.getClass());
     SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
 
-    /**
-     * Save user
-     * @param user
-     */
-    public void save(User user) {
-        Session session = sessionFactory.openSession();
-        Transaction tx = session.beginTransaction();
-        session.persist(user);
-        tx.commit();
-        session.close();
-    }
+//    /**
+//     * Save user
+//     * @param user
+//     */
+//    public void save(User user) {
+//        Session session = sessionFactory.openSession();
+//        Transaction tx = session.beginTransaction();
+//        session.persist(user);
+//        tx.commit();
+//        session.close();
+//    }
+
+
+
     /**
      * Get user by id
      */

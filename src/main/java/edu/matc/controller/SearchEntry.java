@@ -1,6 +1,6 @@
 package edu.matc.controller;
 
-import edu.matc.persistence.UserDao;
+import edu.matc.persistence.CarbonFootprintDao;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
