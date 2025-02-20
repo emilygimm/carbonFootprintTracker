@@ -43,12 +43,14 @@ public class User {
      * @param lastName  users last name
      * @param userName  users username
      * @param passwordHash users password (hashed)
+     * @param dateOfBirth User's date of birth
      */
-    public User(String firstName, String lastName, String userName) {
+    public User(String firstName, String lastName, String userName,String passwordHash, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.passwordHash = passwordHash;
+        this.dateOfBirth = dateOfBirth;
 
     }
 
@@ -164,10 +166,10 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
-                ", id=" + id + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 '}';
     }

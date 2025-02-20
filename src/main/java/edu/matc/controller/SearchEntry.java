@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.entity.CarbonFootprint;
 import edu.matc.persistence.CarbonFootprintDao;
 
 import javax.servlet.RequestDispatcher;
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * A servlet to search for the Users entry.
@@ -24,14 +27,21 @@ public class SearchEntry extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        UserDao userDao = new UserDao();
+        CarbonFootprintDao carbonFootprintDao = new CarbonFootprintDao();
 
-        String entry = req.getParameter("userName");
-        if (entry != null) {
-            req.setAttribute("users", userDao.getByPropertyEqual ("userName", entry));
+        Integer userId = (Integer) req.getSession().getAttribute("userId");
+        String dateParam = req.getParameter("date");
+
+        if (userId != null && dateParam != null) {
+            LocalDate date = LocalDate.parse(dateParam);
+            List<CarbonFootprint> entries = carbonFootprintDao.getEntriesByUserIdAndDate(userId, date);
+            req.setAttribute("entries", entries);
         } else {
-            req.setAttribute("entry", userDao.getAll());
+            req.setAttribute("errorMessage", "You must be logged in and provide a valid date.");
+            System.out.println("User ID in session: " + userId);
+
         }
+
         RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
         dispatcher.forward(req, resp);
 
