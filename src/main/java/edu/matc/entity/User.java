@@ -22,8 +22,8 @@ public class User {
     @Column(name = "user_name")
     private String userName;
 
-    @Column(nullable = false)
-    private String passwordHash;
+    @Column(name = "password")
+    private String password;
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
@@ -42,14 +42,14 @@ public class User {
      * @param firstName users first name
      * @param lastName  users last name
      * @param userName  users username
-     * @param passwordHash users password (hashed)
+     * @param password users password
      * @param dateOfBirth User's date of birth
      */
-    public User(String firstName, String lastName, String userName,String passwordHash, LocalDate dateOfBirth) {
+    public User(String firstName, String lastName, String userName,String password, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
-        this.passwordHash = passwordHash;
+        this.password = password;
         this.dateOfBirth = dateOfBirth;
 
     }
@@ -111,21 +111,21 @@ public class User {
     }
 
     /**
-     * Gets password hash.
+     * Gets password.
      *
-     * @return the password hash
+     * @return the password
      */
-    public String getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
     /**
-     * Sets password hash.
+     * Sets password.
      *
-     * @param passwordHash the password hash
+     * @param password the password
      */
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setPassword(String password) {
+        this.password = password;
     }
     /**
      * Gets id.
