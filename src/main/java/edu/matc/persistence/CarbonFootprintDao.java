@@ -44,7 +44,7 @@ public class CarbonFootprintDao {
      * @return the int
      */
     public int insert(CarbonFootprint entry) {
-        int id = 0;
+        int id;
         Session session = sessionFactory.openSession();
         Transaction transaction = session.beginTransaction();
         session.persist(entry);

@@ -13,14 +13,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserDaoTest {
 
     UserDao userDao;
-//
+
 //    @BeforeEach
 //    void setUp() {
-//        userDao = new UserDao();
+//        //userDao = new UserDao();
 //        Database database = Database.getInstance();
 //        database.runSQL("cleanDB.sql");
-//        System.out.println("Database instance: " + database);
-//        System.out.println("UserDao instance: " + userDao);
+//
 //
 //    }
 

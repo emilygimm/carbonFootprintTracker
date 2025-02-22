@@ -6,3 +6,9 @@
 [DEBUG] 2025-02-21 20:35:46.357 [main] UserDao - Searching for user with lastName = Yang
 [DEBUG] 2025-02-21 20:36:42.971 [main] UserDao - Searching for user with lastName = Yang
 [DEBUG] 2025-02-21 20:37:22.314 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-21 20:43:47.509 [main] UserDao - The list of users [User{id=1, firstName='Joe', lastName='Smith', userName='joesmith', dateOfBirth=1990-01-01}, User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-21 20:43:47.514 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-21 20:43:47.547 [main] UserDao - Searching for user with lastName = Yang
+[DEBUG] 2025-02-22 09:26:13.366 [main] UserDao - The list of users [User{id=1, firstName='Joe', lastName='Smith', userName='joesmith', dateOfBirth=1990-01-01}, User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-22 09:26:13.372 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-22 09:26:13.416 [main] UserDao - Searching for user with lastName = Yang
