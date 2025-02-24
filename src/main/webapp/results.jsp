@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%--<c:import url="head.jsp"/>--%>
+<c:import url="head.jsp"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -36,6 +36,9 @@
                 </tr>
             </c:forEach>
         </table>
+        <c:if test="${empty users}">
+            <p>No results found for your search.</p>
+        </c:if>
     </div>
 
 </body>

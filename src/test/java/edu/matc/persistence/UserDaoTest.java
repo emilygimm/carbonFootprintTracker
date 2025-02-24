@@ -1,10 +1,10 @@
 package edu.matc.persistence;
 import edu.matc.entity.User;
-import edu.matc.test.util.Database;
 
 import java.time.LocalDate;
 import java.util.List;
 
+import edu.matc.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,22 +14,15 @@ class UserDaoTest {
 
     UserDao userDao;
 
-//    @BeforeEach
-//    void setUp() {
-//        //userDao = new UserDao();
-//        Database database = Database.getInstance();
-//        database.runSQL("cleanDB.sql");
-//
-//
-//    }
+    @BeforeEach
+    void setUp() {
+        userDao = new UserDao();
+        Database database = Database.getInstance();
+        database.runSQL("cleanDB.sql");
 
-//    @Test
-//    void save() {
-//        userDao = new UserDao();
-//        User userToSave = userDao.save(user);
-//        assertNotNull(userToSave);
-//        assertEquals("John", retrievedUser.getFirstName());
-//    }
+
+    }
+
 
     @Test
     void getByIdSuccess() {

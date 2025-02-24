@@ -1,5 +1,3 @@
-
-
 package edu.matc.controller;
 
 /**
@@ -16,54 +14,36 @@ public class CalculateEmissions {
     private static final double ELECTRICITY_EMISSION_FACTOR = 0.92; // check for exact emission factor
     private static final int MONTHS_IN_A_YEAR = 12;
 
-
-    /**
-     * Instantiates a new constructor for Transportation.
-     *
-     * @param milesPerGallon    the miles per gallon
-     * @param milesDrivenWeekly the miles driven weekly
-     */
-    public CalculateEmissions(double milesPerGallon, double milesDrivenWeekly) {
-        this.milesDrivenWeekly = milesDrivenWeekly;
+    // Private constructor to prevent direct instantiation
+    private CalculateEmissions(double milesPerGallon, double milesDrivenWeekly, double averageMonthlyElectricBill, double pricePerKWh) {
         this.milesPerGallon = milesPerGallon;
-    }
-
-
-    /**
-     * Constructor for home energy emissions
-     *
-     * @param averageMonthlyElectricBill the average monthly electric bill
-     */
-    public CalculateEmissions(double averageMonthlyElectricBill, double pricePerKWh) {
+        this.milesDrivenWeekly = milesDrivenWeekly;
         this.averageMonthlyElectricBill = averageMonthlyElectricBill;
         this.pricePerKWh = pricePerKWh;
     }
 
-
-    /**
-     * Constructor for both Transportation and Home Energy emissions.
-     *
-     * @param milesPerGallon    the miles per gallon
-     * @param milesDrivenWeekly the miles driven weekly
-     * @param averageMonthlyElectricBill the average monthly electric bill
-     * @param pricePerKWh       the price per kWh
-     */
-    public CalculateEmissions(double milesPerGallon, double milesDrivenWeekly, double averageMonthlyElectricBill, double pricePerKWh) {
-        this(milesPerGallon, milesDrivenWeekly);
-        this.averageMonthlyElectricBill = averageMonthlyElectricBill;
-        this.pricePerKWh = pricePerKWh;
+    // Factory method for transportation emissions
+    public static CalculateEmissions createForTransportation(double milesPerGallon, double milesDrivenWeekly) {
+        return new CalculateEmissions(milesPerGallon, milesDrivenWeekly, 0, 0); // Transportation only
     }
 
+    // Factory method for home energy emissions
+    public static CalculateEmissions createForHomeEnergy(double averageMonthlyElectricBill, double pricePerKWh) {
+        return new CalculateEmissions(0, 0, averageMonthlyElectricBill, pricePerKWh); // Home energy only
+    }
+
+    // Factory method for both transportation and home energy emissions
+    public static CalculateEmissions createForBoth(double milesPerGallon, double milesDrivenWeekly, double averageMonthlyElectricBill, double pricePerKWh) {
+        return new CalculateEmissions(milesPerGallon, milesDrivenWeekly, averageMonthlyElectricBill, pricePerKWh); // Both
+    }
 
     /**
-     * Calculate fuel consumption double.
+     * Calculate fuel consumption in gallons.
      *
      * @return the double
      */
     public double calculateFuelConsumption() {
-
         return milesDrivenWeekly / milesPerGallon;
-
     }
 
     /**
@@ -72,13 +52,8 @@ public class CalculateEmissions {
      * @return the CO2 emissions in lbs
      */
     public double calculateEmissionsOfGasCar() {
-
         return calculateFuelConsumption() * CO2_EMISSIONS_PER_GALLON;
-
     }
-
-    /* Add calculation of emissions of greenhouse gasses other than CO2 */
-
 
     /**
      * Calculate home energy consumption emissions.
@@ -90,14 +65,7 @@ public class CalculateEmissions {
             throw new IllegalArgumentException("Price per kWh cannot be zero.");
         }
         return (averageMonthlyElectricBill / pricePerKWh) * ELECTRICITY_EMISSION_FACTOR * MONTHS_IN_A_YEAR;
-
-
-        // If user uses green power, multiply by percentage of green power used
-
-        // does your house use green power? what portion of your households total purchased electricity uses green power
     }
-
-// 822 lbs is the average for 1 person
 
     /**
      * Calculate total average waste emissions.
@@ -119,6 +87,4 @@ public class CalculateEmissions {
                 + EMISSIONS_FROM_GLASS
                 + EMISSIONS_FROM_MAGAZINES;
     }
-
 }
-

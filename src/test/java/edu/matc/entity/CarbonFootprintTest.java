@@ -1,8 +1,5 @@
 package edu.matc.entity;
-import edu.matc.persistence.UserDao;
 
-import edu.matc.test.util.Database;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
@@ -26,8 +23,8 @@ class CarbonFootprintTest {
 
     @Test
     void testGetById() {
-        carbonFootprint.setId(10);
-        assertEquals(10, carbonFootprint.getId());
+        carbonFootprint.setId(3);
+        assertEquals(3, carbonFootprint.getId());
 
     }
 
@@ -53,6 +50,7 @@ class CarbonFootprintTest {
 
     @Test
     void getCategory() {
+
         assertEquals("Transportation", carbonFootprint.getCategory());
     }
 
@@ -76,6 +74,7 @@ class CarbonFootprintTest {
 
     @Test
     void getEntryDate() {
+
         assertEquals(entryDate, carbonFootprint.getEntryDate());
     }
 
@@ -86,8 +85,15 @@ class CarbonFootprintTest {
         assertEquals(newDate, carbonFootprint.getEntryDate());
     }
 
-    @Test
-    void testToString() {
-
-    }
+//    @Test
+//    void testToString() {
+//        String expected = "CarbonFootprint{" +
+//                "id=0, " +
+//                "user=" + user + ", " +
+//                "category='Transportation', " +
+//                "amount=12.5, " +
+//                "entryDate=" + entryDate +
+//                '}';
+//        assertEquals(expected, carbonFootprint.toString());
+//    }
 }

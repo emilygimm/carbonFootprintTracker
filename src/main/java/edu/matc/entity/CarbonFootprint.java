@@ -21,10 +21,10 @@ import java.time.LocalDate;
         private User user;
 
         @Column(name = "category", nullable = false)
-        private String category;  // e.g., "Transport", "Electricity", "Food"
+        private String category;
 
         @Column(name = "amount", nullable = false)
-        private double amount; // in kg CO2e
+        private double amount;
 
         @Column(name = "entry_date", nullable = false)
         private LocalDate entryDate;
