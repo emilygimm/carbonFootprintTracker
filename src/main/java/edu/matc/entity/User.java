@@ -65,6 +65,7 @@ public class User {
      * @return the first name
      */
     public String getFirstName() {
+
         return firstName;
     }
 
@@ -75,10 +76,12 @@ public class User {
      * @param firstName the first name
      */
     public void setFirstName(String firstName) {
+
         this.firstName = firstName;
     }
 
     public String getLastName() {
+
         return lastName;
     }
 
@@ -88,6 +91,7 @@ public class User {
      * @param lastName the last name
      */
     public void setLastName(String lastName) {
+
         this.lastName = lastName;
     }
 
@@ -98,6 +102,7 @@ public class User {
      * @return the username
      */
     public String getUserName() {
+
         return userName;
     }
 
@@ -107,6 +112,7 @@ public class User {
      * @param userName the username
      */
     public void setUserName(String userName) {
+
         this.userName = userName;
     }
 
@@ -116,6 +122,7 @@ public class User {
      * @return the password
      */
     public String getPassword() {
+
         return password;
     }
 
@@ -125,6 +132,7 @@ public class User {
      * @param password the password
      */
     public void setPassword(String password) {
+
         this.password = password;
     }
     /**
@@ -133,6 +141,7 @@ public class User {
      * @return the id
      */
     public int getId() {
+
         return id;
     }
 
@@ -142,6 +151,7 @@ public class User {
      * @param id the id
      */
     public void setId(int id) {
+
         this.id = id;
     }
 
@@ -151,6 +161,7 @@ public class User {
      * @return the date of birth
      */
     public LocalDate getDateOfBirth() {
+
         return dateOfBirth;
     }
     /**

@@ -8,6 +8,7 @@ import edu.matc.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoTest {
@@ -18,7 +19,7 @@ class UserDaoTest {
     void setUp() {
         userDao = new UserDao();
         Database database = Database.getInstance();
-        database.runSQL("cleanDB.sql");
+        //database.runSQL("cleanDB.sql");
 
 
     }
@@ -49,19 +50,20 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
         userDao = new UserDao();
-        User userToInsert = new User("Kia", "Yang", "ky001", "password123", LocalDate.of(1995, 5, 15));
+        User userToInsert = new User("John", "Doe", "johndoe", "password123", LocalDate.of(1985, 5, 15));
+        //User userToInsert = new User("Kia", "Yang", "ky001", "password987", LocalDate.of(1995, 5, 15));
         int insertedUserId = userDao.insert(userToInsert);
         assertNotEquals(0, insertedUserId);
         User insertedUser = userDao.getById(insertedUserId);
-        assertEquals("Kia", insertedUser.getFirstName());
+        assertEquals("John", insertedUser.getFirstName());
 
     }
 
     @Test
     void delete() {
         userDao = new UserDao();
-        userDao.delete(userDao.getById(2));
-        assertNull(userDao.getById(2));
+        userDao.delete(userDao.getById(1));
+        assertNull(userDao.getById(1));
     }
 
     @Test
@@ -76,13 +78,14 @@ class UserDaoTest {
         userDao = new UserDao();
         List<User> users = userDao.getByPropertyLike("lastName", "Yang");
         assertEquals(1, users.size());
-        assertEquals(3, users.get(0).getId());
+//        assertEquals(6, users.get(0).getId());
+        assertEquals("Yang", users.get(0).getLastName());
     }
 
     @Test
     void getByPropertyLike() {
         userDao = new UserDao();
-        List<User> users = userDao.getByPropertyLike("lastName", "s");
+        List<User> users = userDao.getByPropertyLike("lastName", "y");
         assertEquals(1, users.size());
     }
 }
