@@ -9,8 +9,8 @@ import java.time.LocalDate;
  * Represents a carbon footprint entry for a user.
  */
 @Entity
-    @Table(name = "carbon_footprint")
-    public class CarbonFootprint {
+    @Table(name = "carbon_footprint_entry")
+    public class CarbonFootprintEntry {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ import java.time.LocalDate;
     /**
      * Instantiates a new Carbon footprint.
      */
-    public CarbonFootprint() {
+    public CarbonFootprintEntry() {
         }
 
     /**
@@ -43,7 +43,7 @@ import java.time.LocalDate;
      * @param amount    the amount
      * @param entryDate the entry date
      */
-    public CarbonFootprint(User user, String category, double amount, LocalDate entryDate) {
+    public CarbonFootprintEntry(User user, String category, double amount, LocalDate entryDate) {
             this.user = user;
             this.category = category;
             this.amount = amount;

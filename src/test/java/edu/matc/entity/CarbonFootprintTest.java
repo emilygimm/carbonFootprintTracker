@@ -6,9 +6,9 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CarbonFootprintTest {
+class CarbonFootprintEntryTest {
 
-    private CarbonFootprint carbonFootprint;
+    private CarbonFootprintEntry carbonFootprintEntry;
     private User user;
     private LocalDate entryDate;
 
@@ -23,20 +23,20 @@ class CarbonFootprintTest {
 
     @Test
     void testGetById() {
-        carbonFootprint.setId(3);
-        assertEquals(3, carbonFootprint.getId());
+        carbonFootprintEntry.setId(3);
+        assertEquals(3, carbonFootprintEntry.getId());
 
     }
 
     @Test
     void setId() {
-        carbonFootprint.setId(5);
-        assertEquals(5, carbonFootprint.getId());
+        carbonFootprintEntry.setId(5);
+        assertEquals(5, carbonFootprintEntry.getId());
     }
 
     @Test
     void getUser() {
-        assertEquals(user, carbonFootprint.getUser());
+        assertEquals(user, carbonFootprintEntry.getUser());
 
     }
 
@@ -44,56 +44,45 @@ class CarbonFootprintTest {
     void setUser() {
         User newUser = new User();
         newUser.setId(2);
-        carbonFootprint.setUser(newUser);
-        assertEquals(newUser, carbonFootprint.getUser());
+        carbonFootprintEntry.setUser(newUser);
+        assertEquals(newUser, carbonFootprintEntry.getUser());
     }
 
     @Test
     void getCategory() {
 
-        assertEquals("Transportation", carbonFootprint.getCategory());
+        assertEquals("Transportation", carbonFootprintEntry.getCategory());
     }
 
     @Test
     void setCategory() {
-        carbonFootprint.setCategory("Energy");
-        assertEquals("Energy", carbonFootprint.getCategory());
+        carbonFootprintEntry.setCategory("Energy");
+        assertEquals("Energy", carbonFootprintEntry.getCategory());
     }
 
     @Test
     void getAmount() {
-        assertEquals(12.5, carbonFootprint.getAmount());
+        assertEquals(12.5, carbonFootprintEntry.getAmount());
 
     }
 
     @Test
     void setAmount() {
-        carbonFootprint.setAmount(20.0);
-        assertEquals(20.0, carbonFootprint.getAmount());
+        carbonFootprintEntry.setAmount(20.0);
+        assertEquals(20.0, carbonFootprintEntry.getAmount());
     }
 
     @Test
     void getEntryDate() {
 
-        assertEquals(entryDate, carbonFootprint.getEntryDate());
+        assertEquals(entryDate, carbonFootprintEntry.getEntryDate());
     }
 
     @Test
     void setEntryDate() {
         LocalDate newDate = LocalDate.of(2025, 3, 15);
-        carbonFootprint.setEntryDate(newDate);
-        assertEquals(newDate, carbonFootprint.getEntryDate());
+        carbonFootprintEntry.setEntryDate(newDate);
+        assertEquals(newDate, carbonFootprintEntry.getEntryDate());
     }
 
-//    @Test
-//    void testToString() {
-//        String expected = "CarbonFootprint{" +
-//                "id=0, " +
-//                "user=" + user + ", " +
-//                "category='Transportation', " +
-//                "amount=12.5, " +
-//                "entryDate=" + entryDate +
-//                '}';
-//        assertEquals(expected, carbonFootprint.toString());
-//    }
 }

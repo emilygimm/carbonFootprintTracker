@@ -1,6 +1,6 @@
 package edu.matc.controller;
 
-import edu.matc.entity.CarbonFootprint;
+import edu.matc.entity.CarbonFootprintEntry;
 import edu.matc.persistence.CarbonFootprintDao;
 
 import javax.servlet.RequestDispatcher;
@@ -34,7 +34,7 @@ public class SearchEntry extends HttpServlet {
 
         if (userId != null && dateParam != null) {
             LocalDate date = LocalDate.parse(dateParam);
-            List<CarbonFootprint> entries = carbonFootprintDao.getEntriesByUserIdAndDate(userId, date);
+            List<CarbonFootprintEntry> entries = carbonFootprintDao.getEntriesByUserIdAndDate(userId, date);
             req.setAttribute("entries", entries);
         } else {
             req.setAttribute("errorMessage", "You must be logged in and provide a valid date.");
