@@ -6,28 +6,28 @@
 - [X] Create journal/time log
 
 # Week 4
-- [ ] Create the dev version of the database - table for tracking progress
-- [ ] Create goal entity
-- [ ] Create GoalDAO class to perform crud operations
-- [ ] Create the config files for the db connection info
-- [ ] Create test version of the database for unit testing 
-- [ ] Create unit tests for the GoalDAO
-- [ ] Create class for the db connection
-- [ ] Create jsp for creating goals
+- [X] Create the dev version of the database - table for tracking progress
+- [X] Create User entity
+- [X] Create UserDAO class to perform crud operations
+- [X] Create the config files for the db connection info
+- [X] Create test version of the database for unit testing 
+- [X] Create unit tests for the UserDAO
+- [X] Create class for the db connection
+- [X] Create jsp for the index.jsp
 - [ ] Create jsp for calculating carbon footprint
-- [ ] Create controller to route to goal jsp
+- [ ] Create controller to route to jsp
 - [ ] Create controller to manage the work of calculating the carbon footprint
 - [ ] Update weekly reflection/ time log
 
 # Week 5
-- [ ] Create User entity and DAO
+- [ ] Create CarbonFootprintEntry entity and DAO
 - [ ] Implement user registration and login
 - [ ] Update weekly reflection/ time log
 
 # Week 6
-- [ ] Implement calculation logic
+- [X] Implement calculation logic
 - [ ] Write unit tests for footprint calculations
-- [ ] add feature to show past calculation ?
+- [ ] add feature to show past calculation 
 - [ ] Update weekly reflection
 
 # Week 7 (Checkpoint 2 due)

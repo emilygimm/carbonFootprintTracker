@@ -90,7 +90,7 @@ public class UserDao {
 
     /**
      * Get user by property (exact match)
-     * sample usage: getByPropertyEqual("lastname", "Curry")
+     * sample usage: getByPropertyEqual("lastname", "Smith")
      */
     public List<User> getByPropertyEqual(String propertyName, String value) {
         Session session = sessionFactory.openSession();

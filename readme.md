@@ -22,7 +22,7 @@ This carbon footprint tracker application focuses on creating sustainable goals,
 * Web Services consumed using Java
 
 * CSS
-
+  * Bootstrap
 * Data Validation
 
 * Logging
@@ -30,7 +30,7 @@ This carbon footprint tracker application focuses on creating sustainable goals,
 * Hosting
   * AWS
 * Tech I'd like to explore as part of this work
-
+  
 * Unit Testing
     * JUnit tests to cover all testable logic
 * IDE: IntelliJ IDEA
