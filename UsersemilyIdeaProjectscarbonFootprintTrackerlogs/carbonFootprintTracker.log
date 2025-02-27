@@ -85,3 +85,51 @@
 [DEBUG] 2025-02-25 19:19:41.646 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='John', lastName='Doe', userName='johndoe', dateOfBirth=1985-05-15}]
 [DEBUG] 2025-02-25 19:19:41.652 [main] UserDao - Searching for user with lastName = y
 [DEBUG] 2025-02-25 19:19:41.690 [main] UserDao - Searching for user with lastName = Yang
+[DEBUG] 2025-02-26 18:31:48.625 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-26 18:31:48.645 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 18:31:48.716 [main] UserDao - Searching for user with lastName = Yang
+[DEBUG] 2025-02-26 18:37:38.400 [main] UserDao - The list of users []
+[DEBUG] 2025-02-26 18:37:38.428 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 18:37:38.495 [main] UserDao - Searching for user with lastName = Yang
+[DEBUG] 2025-02-26 18:38:32.265 [main] UserDao - Searching for user with lastName = Yang
+[DEBUG] 2025-02-26 18:39:02.229 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 18:45:53.433 [main] UserDao - The list of users [User{id=1, firstName='Joe', lastName='Smith', userName='joesmith', dateOfBirth=1990-01-01}, User{id=6, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-26 18:46:39.875 [main] UserDao - The list of users [User{id=6, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-26 18:46:53.968 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 18:47:10.606 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 19:09:22.696 [main] UserDao - The list of users [User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 19:09:22.714 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 19:09:22.772 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 19:44:01.725 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 19:44:01.732 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 19:44:01.784 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 19:47:56.396 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}]
+[DEBUG] 2025-02-26 19:47:56.418 [main] UserDao - Searching for user with lastName = y
+[DEBUG] 2025-02-26 19:47:56.480 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:19:26.695 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}, User{id=9, firstName='John', lastName='Doe', userName='johndoe', dateOfBirth=1985-05-15}]
+[DEBUG] 2025-02-26 20:20:10.195 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:20:51.085 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:21:43.980 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:21:44.002 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:21:44.063 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:22:13.217 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}, User{id=7, firstName='John', lastName='Doe', userName='johndoe', dateOfBirth=1985-05-15}]
+[DEBUG] 2025-02-26 20:23:23.681 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:23:23.705 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:23:23.768 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:24:17.622 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:24:17.650 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:24:17.718 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:34:08.938 [main] UserDao - The list of users [User{id=1, firstName='Joe', lastName='Smith', userName='joesmith', dateOfBirth=1990-01-01}, User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:34:34.615 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:34:34.644 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:34:34.712 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:35:42.248 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}, User{id=7, firstName='John', lastName='Doe', userName='johndoe', dateOfBirth=1985-05-15}]
+[DEBUG] 2025-02-26 20:36:39.555 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:36:39.580 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:36:39.640 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:37:53.219 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:37:53.230 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:37:53.298 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-26 20:39:19.759 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-26 20:39:19.764 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-26 20:39:19.808 [main] UserDao - Searching for user with lastName = S

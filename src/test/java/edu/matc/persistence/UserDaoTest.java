@@ -28,22 +28,22 @@ class UserDaoTest {
     @Test
     void getByIdSuccess() {
         userDao = new UserDao();
-        User retrievedUser = userDao.getById(1);
+        User retrievedUser = userDao.getById(6);
         assertNotNull(retrievedUser);
-        assertEquals("Joe", retrievedUser.getFirstName());
+        assertEquals("Freddy", retrievedUser.getFirstName());
 
     }
 
     @Test
     void updateSuccess() {
         userDao = new UserDao();
-        User userToUpdate = userDao.getById(1);
-        userToUpdate.setLastName("Smith");
+        User userToUpdate = userDao.getById(6);
+        userToUpdate.setLastName("Solbjerg");
         userDao.update(userToUpdate);
 
         // retrieve the user and check that the name change worked
-        User actualUser = userDao.getById(1);
-        assertEquals("Smith", actualUser.getLastName());
+        User actualUser = userDao.getById(6);
+        assertEquals("Solbjerg", actualUser.getLastName());
 
     }
 
@@ -70,22 +70,22 @@ class UserDaoTest {
     void getAll() {
         userDao = new UserDao();
         List<User> users = userDao.getAll();
+        System.out.println("Number of users fetched: " + users.size());
         assertEquals(2, users.size());
     }
 
     @Test
     void getByPropertyEqual() {
         userDao = new UserDao();
-        List<User> users = userDao.getByPropertyLike("lastName", "Yang");
+        List<User> users = userDao.getByPropertyLike("lastName", "S");
         assertEquals(1, users.size());
-//        assertEquals(6, users.get(0).getId());
-        assertEquals("Yang", users.get(0).getLastName());
+        assertEquals("Solbjerg", users.get(0).getLastName());
     }
 
     @Test
     void getByPropertyLike() {
         userDao = new UserDao();
-        List<User> users = userDao.getByPropertyLike("lastName", "y");
+        List<User> users = userDao.getByPropertyLike("lastName", "s");
         assertEquals(1, users.size());
     }
 }

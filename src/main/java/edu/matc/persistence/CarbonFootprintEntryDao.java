@@ -1,25 +1,23 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.CarbonFootprintEntry;
-import edu.matc.entity.User;
 import jakarta.persistence.criteria.*;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
-import jakarta.persistence.criteria.Expression;
 import jakarta.persistence.criteria.Root;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.criteria.HibernateCriteriaBuilder;
+
 import java.time.LocalDate;
 import java.util.List;
 
 /**
  * The type Carbon footprint dao.
  */
-public class CarbonFootprintDao {
+public class CarbonFootprintEntryDao {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private final SessionFactory sessionFactory = SessionFactoryProvider.getSessionFactory();
