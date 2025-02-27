@@ -133,3 +133,9 @@
 [DEBUG] 2025-02-26 20:39:19.759 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
 [DEBUG] 2025-02-26 20:39:19.764 [main] UserDao - Searching for user with lastName = s
 [DEBUG] 2025-02-26 20:39:19.808 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-27 10:08:59.026 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}, User{id=7, firstName='John', lastName='Doe', userName='johndoe', dateOfBirth=1985-05-15}]
+[DEBUG] 2025-02-27 10:08:59.049 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-27 10:08:59.147 [main] UserDao - Searching for user with lastName = S
+[DEBUG] 2025-02-27 10:09:43.017 [main] UserDao - The list of users [User{id=3, firstName='Kia', lastName='Yang', userName='ky001', dateOfBirth=1995-05-15}, User{id=6, firstName='Freddy', lastName='Solbjerg', userName='freddy001', dateOfBirth=1990-07-21}]
+[DEBUG] 2025-02-27 10:09:43.025 [main] UserDao - Searching for user with lastName = s
+[DEBUG] 2025-02-27 10:09:43.117 [main] UserDao - Searching for user with lastName = S
